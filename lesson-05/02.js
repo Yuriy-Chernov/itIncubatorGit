@@ -35,4 +35,10 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(musem, pano, author) {
+
+musem[pano] = author
+return musem[pano] !== undefined ? musem[pano] = author : musem[pano] = author
+
+}
+
