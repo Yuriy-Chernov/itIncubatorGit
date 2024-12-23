@@ -12,5 +12,5 @@
 function truncate(str, maxLength) {
   console.log(str.length)
   newstr = str.slice(0, maxLength)
-  return str.length < maxLength ? str : `${newstr}...` 
+  return str.length <= maxLength ? str : `${newstr}...` 
 }
