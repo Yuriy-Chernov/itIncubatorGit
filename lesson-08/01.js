@@ -63,8 +63,20 @@ function updateCartDisplay() {
 }
 
 clearCartButton.addEventListener('click', function () {
-  cart.length = 0
+  cart.length = 0;
+  
   updateCartDisplay()
 })
 
-// Твой код:
+const petButtons = document.querySelectorAll('.pet');
+
+petButtons.forEach(button => {
+   button.addEventListener('click', () => {
+    const petId = button.id;
+    cart.length < 3 ? cart.push(petId) : messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+    
+    console.log(`Добавлено в корзину: ${petId}`);
+    console.log(`Текущая корзина:`, cart);
+    updateCartDisplay()
+  });}
+);
