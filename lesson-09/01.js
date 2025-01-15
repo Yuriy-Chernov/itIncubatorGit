@@ -34,4 +34,12 @@ for (let i = 0;i<array.length;i++){
   }
 }
 return newArr
+
 }
+let callback = (element, index) => {
+ let res = false;
+ if (element % 2 === 0){res = true}
+return res
+}
+
+console.log(filter([1,2,3,4,5],callback))
